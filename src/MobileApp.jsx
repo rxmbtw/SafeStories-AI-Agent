@@ -4,7 +4,7 @@ import './MobileApp.css'
 import { useState, useEffect } from 'react'
 import { useConversation } from '@elevenlabs/react'
 import MobileLoader from './MobileLoader'
-import MobileLoader from './MobileLoader'
+
 import { IMAGE_URLS } from './imageConfig'
 
 function MobileApp() {
@@ -117,221 +117,221 @@ function MobileApp() {
         </button>
       </div>
 
-    </footer>
+
 
       {
-    showAdolescentModal && (
-      <div className="mobile-modal-overlay" onClick={() => setShowAdolescentModal(false)}>
-        <div className="mobile-modal therapists" onClick={(e) => e.stopPropagation()}>
-          <div className="modal-header">
-            <h2>Adolescent Therapy (13+)</h2>
-            <button className="modal-close" onClick={() => setShowAdolescentModal(false)}>×</button>
-          </div>
-
-          <div className="therapist-list">
-            <div className="therapist-card active" onClick={() => window.open('https://anjalipillai.dayschedule.com/adolescent-therapy-session-with-anjali', '_blank')}>
-              <img className="therapist-avatar" src={IMAGE_URLS.anjali_pillai} alt="Anjali Pillai" />
-              <div className="therapist-details">
-                <h3>Anjali Pillai</h3>
-                <p>Executive Psychologist | Online & In-person (Pune only) | ₹1700/session</p>
+        showAdolescentModal && (
+          <div className="mobile-modal-overlay" onClick={() => setShowAdolescentModal(false)}>
+            <div className="mobile-modal therapists" onClick={(e) => e.stopPropagation()}>
+              <div className="modal-header">
+                <h2>Adolescent Therapy (13+)</h2>
+                <button className="modal-close" onClick={() => setShowAdolescentModal(false)}>×</button>
               </div>
-            </div>
 
-            <div className="therapist-card" onClick={() => window.open('https://ishika.dayschedule.com/adolescent-session-ishika', '_blank')}>
-              <img className="therapist-avatar" src={IMAGE_URLS.ishika_mahajan} alt="Ishika Mahajan" />
-              <div className="therapist-details">
-                <h3>Ishika Mahajan</h3>
-                <p>Psychologist | Online & In-person (Pune only) | ₹1700/session</p>
+              <div className="therapist-list">
+                <div className="therapist-card active" onClick={() => window.open('https://anjalipillai.dayschedule.com/adolescent-therapy-session-with-anjali', '_blank')}>
+                  <img className="therapist-avatar" src={IMAGE_URLS.anjali_pillai} alt="Anjali Pillai" />
+                  <div className="therapist-details">
+                    <h3>Anjali Pillai</h3>
+                    <p>Executive Psychologist | Online & In-person (Pune only) | ₹1700/session</p>
+                  </div>
+                </div>
+
+                <div className="therapist-card" onClick={() => window.open('https://ishika.dayschedule.com/adolescent-session-ishika', '_blank')}>
+                  <img className="therapist-avatar" src={IMAGE_URLS.ishika_mahajan} alt="Ishika Mahajan" />
+                  <div className="therapist-details">
+                    <h3>Ishika Mahajan</h3>
+                    <p>Psychologist | Online & In-person (Pune only) | ₹1700/session</p>
+                  </div>
+                </div>
+
+                <div className="therapist-card disabled">
+                  <img className="therapist-avatar" src={IMAGE_URLS.aastha_yagnik} alt="Aastha Yagnik" />
+                  <div className="therapist-details">
+                    <h3>Aastha Yagnik</h3>
+                    <p>Senior Psychotherapist | Online Only | ₹3000/session</p>
+                  </div>
+                </div>
+
+                <div className="therapist-card disabled">
+                  <img className="therapist-avatar" src={IMAGE_URLS.indrayani_hinge} alt="Indrayani Hinge" />
+                  <div className="therapist-details">
+                    <h3>Indrayani Hinge</h3>
+                    <p>Jr. Psychologist | Online & In-person (Pune only) | ₹1200/session</p>
+                  </div>
+                </div>
+
+                <div className="therapist-card disabled">
+                  <img className="therapist-avatar" src={IMAGE_URLS.ambika_vaidya} alt="Ambika Vaidya" />
+                  <div className="therapist-details">
+                    <h3>Ambika Vaidya</h3>
+                    <p>Jr. Psychologist | Online & In-person (Pune only) | ₹1200/session</p>
+                  </div>
+                </div>
+
+                <div className="therapist-card disabled">
+                  <img className="therapist-avatar" src={IMAGE_URLS.muskan_negi} alt="Muskan Negi" />
+                  <div className="therapist-details">
+                    <h3>Muskan Negi</h3>
+                    <p>Jr. Psychologist | Online & In-person (Pune only) | ₹1200/session</p>
+                  </div>
+                </div>
               </div>
-            </div>
 
-            <div className="therapist-card disabled">
-              <img className="therapist-avatar" src={IMAGE_URLS.aastha_yagnik} alt="Aastha Yagnik" />
-              <div className="therapist-details">
-                <h3>Aastha Yagnik</h3>
-                <p>Senior Psychotherapist | Online Only | ₹3000/session</p>
-              </div>
-            </div>
-
-            <div className="therapist-card disabled">
-              <img className="therapist-avatar" src={IMAGE_URLS.indrayani_hinge} alt="Indrayani Hinge" />
-              <div className="therapist-details">
-                <h3>Indrayani Hinge</h3>
-                <p>Jr. Psychologist | Online & In-person (Pune only) | ₹1200/session</p>
-              </div>
-            </div>
-
-            <div className="therapist-card disabled">
-              <img className="therapist-avatar" src={IMAGE_URLS.ambika_vaidya} alt="Ambika Vaidya" />
-              <div className="therapist-details">
-                <h3>Ambika Vaidya</h3>
-                <p>Jr. Psychologist | Online & In-person (Pune only) | ₹1200/session</p>
-              </div>
-            </div>
-
-            <div className="therapist-card disabled">
-              <img className="therapist-avatar" src={IMAGE_URLS.muskan_negi} alt="Muskan Negi" />
-              <div className="therapist-details">
-                <h3>Muskan Negi</h3>
-                <p>Jr. Psychologist | Online & In-person (Pune only) | ₹1200/session</p>
-              </div>
-            </div>
-          </div>
-
-          <button className="go-back" onClick={() => { setShowAdolescentModal(false); setShowScheduleModal(true); }}>Go Back</button>
-        </div>
-      </div>
-    )
-  }
-
-  {
-    showCouplesModal && (
-      <div className="mobile-modal-overlay" onClick={() => setShowCouplesModal(false)}>
-        <div className="mobile-modal therapists" onClick={(e) => e.stopPropagation()}>
-          <div className="modal-header">
-            <h2>Couples Therapy</h2>
-            <button className="modal-close" onClick={() => setShowCouplesModal(false)}>×</button>
-          </div>
-
-          <div className="therapist-list">
-            <div className="therapist-card couples" onClick={() => window.open('https://ishika.dayschedule.com/couple-therapy-ishika', '_blank')}>
-              <img className="therapist-avatar" src={IMAGE_URLS.ishika_mahajan} alt="Ishika Mahajan" />
-              <div className="therapist-details">
-                <h3>Ishika Mahajan</h3>
-                <p>Psychologist | Online & In-person (Pune only) | ₹2500/session</p>
-              </div>
+              <button className="go-back" onClick={() => { setShowAdolescentModal(false); setShowScheduleModal(true); }}>Go Back</button>
             </div>
           </div>
+        )
+      }
 
-          <button className="go-back" onClick={() => { setShowCouplesModal(false); setShowScheduleModal(true); }}>Go Back</button>
-        </div>
-      </div>
-    )
-  }
-
-  {
-    showIndividualModal && (
-      <div className="mobile-modal-overlay" onClick={() => setShowIndividualModal(false)}>
-        <div className="mobile-modal therapists" onClick={(e) => e.stopPropagation()}>
-          <div className="modal-header">
-            <h2>Individual Therapy (18+)</h2>
-            <button className="modal-close" onClick={() => setShowIndividualModal(false)}>×</button>
-          </div>
-
-          <div className="therapist-list">
-            <div className="therapist-card active" onClick={() => window.open('https://anjalipillai.dayschedule.com/individual-session-with-anjalipillai', '_blank')}>
-              <img className="therapist-avatar" src={IMAGE_URLS.anjali_pillai} alt="Anjali Pillai" />
-              <div className="therapist-details">
-                <h3>Anjali Pillai</h3>
-                <p>Executive Psychologist | Online & In-person (Pune only) | ₹1700/session</p>
+      {
+        showCouplesModal && (
+          <div className="mobile-modal-overlay" onClick={() => setShowCouplesModal(false)}>
+            <div className="mobile-modal therapists" onClick={(e) => e.stopPropagation()}>
+              <div className="modal-header">
+                <h2>Couples Therapy</h2>
+                <button className="modal-close" onClick={() => setShowCouplesModal(false)}>×</button>
               </div>
-            </div>
 
-            <div className="therapist-card" onClick={() => window.open('https://ishika.dayschedule.com/session-with-ishika', '_blank')}>
-              <img className="therapist-avatar" src={IMAGE_URLS.ishika_mahajan} alt="Ishika Mahajan" />
-              <div className="therapist-details">
-                <h3>Ishika Mahajan</h3>
-                <p>Psychologist | Online & In-person (Pune only) | ₹1700/session</p>
+              <div className="therapist-list">
+                <div className="therapist-card couples" onClick={() => window.open('https://ishika.dayschedule.com/couple-therapy-ishika', '_blank')}>
+                  <img className="therapist-avatar" src={IMAGE_URLS.ishika_mahajan} alt="Ishika Mahajan" />
+                  <div className="therapist-details">
+                    <h3>Ishika Mahajan</h3>
+                    <p>Psychologist | Online & In-person (Pune only) | ₹2500/session</p>
+                  </div>
+                </div>
               </div>
-            </div>
 
-            <div className="therapist-card disabled">
-              <img className="therapist-avatar" src={IMAGE_URLS.aastha_yagnik} alt="Aastha Yagnik" />
-              <div className="therapist-details">
-                <h3>Aastha Yagnik</h3>
-                <p>Senior Psychotherapist | Online Only | ₹3000/session</p>
-              </div>
-            </div>
-
-            <div className="therapist-card disabled">
-              <img className="therapist-avatar" src={IMAGE_URLS.indrayani_hinge} alt="Indrayani Hinge" />
-              <div className="therapist-details">
-                <h3>Indrayani Hinge</h3>
-                <p>Jr. Psychologist | Online & In-person (Pune only) | ₹1200/session</p>
-              </div>
-            </div>
-
-            <div className="therapist-card disabled">
-              <img className="therapist-avatar" src={IMAGE_URLS.ambika_vaidya} alt="Ambika Vaidya" />
-              <div className="therapist-details">
-                <h3>Ambika Vaidya</h3>
-                <p>Jr. Psychologist | Online & In-person (Pune only) | ₹1200/session</p>
-              </div>
-            </div>
-
-            <div className="therapist-card disabled">
-              <img className="therapist-avatar" src={IMAGE_URLS.muskan_negi} alt="Muskan Negi" />
-              <div className="therapist-details">
-                <h3>Muskan Negi</h3>
-                <p>Jr. Psychologist | Online & In-person (Pune only) | ₹1200/session</p>
-              </div>
+              <button className="go-back" onClick={() => { setShowCouplesModal(false); setShowScheduleModal(true); }}>Go Back</button>
             </div>
           </div>
+        )
+      }
 
-          <button className="go-back" onClick={() => { setShowIndividualModal(false); setShowScheduleModal(true); }}>Go Back</button>
-        </div>
-      </div>
-    )
-  }
+      {
+        showIndividualModal && (
+          <div className="mobile-modal-overlay" onClick={() => setShowIndividualModal(false)}>
+            <div className="mobile-modal therapists" onClick={(e) => e.stopPropagation()}>
+              <div className="modal-header">
+                <h2>Individual Therapy (18+)</h2>
+                <button className="modal-close" onClick={() => setShowIndividualModal(false)}>×</button>
+              </div>
 
-  {
-    showScheduleModal && (
-      <div className="mobile-modal-overlay" onClick={() => setShowScheduleModal(false)}>
-        <div className="mobile-modal" onClick={(e) => e.stopPropagation()}>
-          <div className="modal-header">
-            <h2>Select Therapy Type</h2>
-            <button className="modal-close" onClick={() => setShowScheduleModal(false)}>×</button>
+              <div className="therapist-list">
+                <div className="therapist-card active" onClick={() => window.open('https://anjalipillai.dayschedule.com/individual-session-with-anjalipillai', '_blank')}>
+                  <img className="therapist-avatar" src={IMAGE_URLS.anjali_pillai} alt="Anjali Pillai" />
+                  <div className="therapist-details">
+                    <h3>Anjali Pillai</h3>
+                    <p>Executive Psychologist | Online & In-person (Pune only) | ₹1700/session</p>
+                  </div>
+                </div>
+
+                <div className="therapist-card" onClick={() => window.open('https://ishika.dayschedule.com/session-with-ishika', '_blank')}>
+                  <img className="therapist-avatar" src={IMAGE_URLS.ishika_mahajan} alt="Ishika Mahajan" />
+                  <div className="therapist-details">
+                    <h3>Ishika Mahajan</h3>
+                    <p>Psychologist | Online & In-person (Pune only) | ₹1700/session</p>
+                  </div>
+                </div>
+
+                <div className="therapist-card disabled">
+                  <img className="therapist-avatar" src={IMAGE_URLS.aastha_yagnik} alt="Aastha Yagnik" />
+                  <div className="therapist-details">
+                    <h3>Aastha Yagnik</h3>
+                    <p>Senior Psychotherapist | Online Only | ₹3000/session</p>
+                  </div>
+                </div>
+
+                <div className="therapist-card disabled">
+                  <img className="therapist-avatar" src={IMAGE_URLS.indrayani_hinge} alt="Indrayani Hinge" />
+                  <div className="therapist-details">
+                    <h3>Indrayani Hinge</h3>
+                    <p>Jr. Psychologist | Online & In-person (Pune only) | ₹1200/session</p>
+                  </div>
+                </div>
+
+                <div className="therapist-card disabled">
+                  <img className="therapist-avatar" src={IMAGE_URLS.ambika_vaidya} alt="Ambika Vaidya" />
+                  <div className="therapist-details">
+                    <h3>Ambika Vaidya</h3>
+                    <p>Jr. Psychologist | Online & In-person (Pune only) | ₹1200/session</p>
+                  </div>
+                </div>
+
+                <div className="therapist-card disabled">
+                  <img className="therapist-avatar" src={IMAGE_URLS.muskan_negi} alt="Muskan Negi" />
+                  <div className="therapist-details">
+                    <h3>Muskan Negi</h3>
+                    <p>Jr. Psychologist | Online & In-person (Pune only) | ₹1200/session</p>
+                  </div>
+                </div>
+              </div>
+
+              <button className="go-back" onClick={() => { setShowIndividualModal(false); setShowScheduleModal(true); }}>Go Back</button>
+            </div>
           </div>
+        )
+      }
 
-          <div className="therapy-options">
-            <div className="therapy-card individual" onClick={() => { setShowScheduleModal(false); setShowIndividualModal(true); }}>
-              <div className="therapy-icon">
-                <svg width="24" height="24" viewBox="0 0 40 40" fill="none">
-                  <path d="M20 20C23.3137 20 26 17.3137 26 14C26 10.6863 23.3137 8 20 8C16.6863 8 14 10.6863 14 14C14 17.3137 16.6863 20 20 20Z" fill="white" opacity="0.4" />
-                  <path d="M20 22C13.3726 22 8 24.6863 8 28V30C8 31.1046 8.89543 32 10 32H30C31.1046 32 32 31.1046 32 30V28C32 24.6863 26.6274 22 20 22Z" fill="white" />
-                </svg>
+      {
+        showScheduleModal && (
+          <div className="mobile-modal-overlay" onClick={() => setShowScheduleModal(false)}>
+            <div className="mobile-modal" onClick={(e) => e.stopPropagation()}>
+              <div className="modal-header">
+                <h2>Select Therapy Type</h2>
+                <button className="modal-close" onClick={() => setShowScheduleModal(false)}>×</button>
               </div>
-              <div className="therapy-info">
-                <h3>Individual Therapy (18+)</h3>
-                <p>Focused on personal growth and emotional wellbeing</p>
-              </div>
-            </div>
 
-            <div className="therapy-card couples" onClick={() => { setShowScheduleModal(false); setShowCouplesModal(true); }}>
-              <div className="therapy-icon">
-                <svg width="24" height="24" viewBox="0 0 40 40" fill="none">
-                  <path d="M14 20C16.7614 20 19 17.7614 19 15C19 12.2386 16.7614 10 14 10C11.2386 10 9 12.2386 9 15C9 17.7614 11.2386 20 14 20Z" fill="#130F26" opacity="0.4" />
-                  <path d="M14 22C9.58172 22 6 24.6863 6 28V29C6 29.5523 6.44772 30 7 30H21C21.5523 30 22 29.5523 22 29V28C22 24.6863 18.4183 22 14 22Z" fill="#130F26" />
-                  <path d="M26 20C28.7614 20 31 17.7614 31 15C31 12.2386 28.7614 10 26 10C23.2386 10 21 12.2386 21 15C21 17.7614 23.2386 20 26 20Z" fill="#130F26" opacity="0.4" />
-                  <path d="M26 22C21.5817 22 18 24.6863 18 28V29C18 29.5523 18.4477 30 19 30H33C33.5523 30 34 29.5523 34 29V28C34 24.6863 30.4183 22 26 22Z" fill="#130F26" />
-                </svg>
-              </div>
-              <div className="therapy-info">
-                <h3>Couples Therapy</h3>
-                <p>Focused to help partners improve communication, resolve conflicts, and strengthen their relationship</p>
-              </div>
-            </div>
+              <div className="therapy-options">
+                <div className="therapy-card individual" onClick={() => { setShowScheduleModal(false); setShowIndividualModal(true); }}>
+                  <div className="therapy-icon">
+                    <svg width="24" height="24" viewBox="0 0 40 40" fill="none">
+                      <path d="M20 20C23.3137 20 26 17.3137 26 14C26 10.6863 23.3137 8 20 8C16.6863 8 14 10.6863 14 14C14 17.3137 16.6863 20 20 20Z" fill="white" opacity="0.4" />
+                      <path d="M20 22C13.3726 22 8 24.6863 8 28V30C8 31.1046 8.89543 32 10 32H30C31.1046 32 32 31.1046 32 30V28C32 24.6863 26.6274 22 20 22Z" fill="white" />
+                    </svg>
+                  </div>
+                  <div className="therapy-info">
+                    <h3>Individual Therapy (18+)</h3>
+                    <p>Focused on personal growth and emotional wellbeing</p>
+                  </div>
+                </div>
 
-            <div className="therapy-card adolescent" onClick={() => { setShowScheduleModal(false); setShowAdolescentModal(true); }}>
-              <div className="therapy-icon">
-                <svg width="24" height="24" viewBox="0 0 41 41" fill="none">
-                  <path d="M36.6052 4.40467C35.751 3.53172 34.4869 3.20884 33.3081 3.55051L5.82103 11.4925C4.57736 11.8376 3.69586 12.8233 3.4584 14.0738C3.21582 15.3483 4.06315 16.9678 5.17015 17.6443L13.7648 22.8923C14.6463 23.4321 15.784 23.2971 16.5135 22.566L26.3552 12.7243C26.8506 12.21 27.6706 12.21 28.166 12.7243C28.6614 13.218 28.6614 14.0226 28.166 14.5351L18.3072 24.3768C17.5761 25.108 17.4394 26.2423 17.9775 27.1255L23.2289 35.7526C23.8439 36.7759 24.9031 37.3584 26.0648 37.3584C26.2014 37.3584 26.3552 37.3584 26.4919 37.3396C27.8244 37.1705 28.8835 36.2634 29.2764 34.9821L37.4252 7.70176C37.7839 6.54009 37.4594 5.27592 36.6052 4.40467Z" fill="#130F26" />
-                  <path opacity="0.4" d="M14.3338 32.7007C14.8343 32.2022 15.6459 32.2021 16.1463 32.7007C16.6451 33.2012 16.6451 34.0136 16.1463 34.5142L13.8123 36.8452C13.5629 37.0963 13.235 37.2212 12.907 37.2212C12.5791 37.2212 12.2512 37.0963 12.0018 36.8452C11.5014 36.3447 11.5013 35.5352 12.0018 35.0347L14.3338 32.7007ZM12.9949 26.23C13.4955 25.7312 14.3069 25.7312 14.8074 26.23C15.3062 26.7305 15.3062 27.5419 14.8074 28.0425L12.4734 30.3745C12.2241 30.6255 11.8961 30.7505 11.5682 30.7505C11.2402 30.7505 10.9123 30.6256 10.6629 30.3745C10.1624 29.874 10.1626 29.0645 10.6629 28.564L12.9949 26.23ZM6.56915 24.1929C7.06963 23.6941 7.8811 23.6942 8.38165 24.1929C8.88049 24.6934 8.88049 25.5048 8.38165 26.0054L6.04865 28.3374C5.79934 28.5884 5.47123 28.7133 5.14337 28.7134C4.81537 28.7134 4.48654 28.5885 4.23712 28.3374C3.73689 27.837 3.737 27.0274 4.23712 26.5269L6.56915 24.1929Z" fill="#130F26" />
-                </svg>
-              </div>
-              <div className="therapy-info">
-                <h3>Adolescent Therapy (13+)</h3>
-                <p>Focused to support teens dealing with academic pressure, emotional challenges, and behavioral concerns.</p>
+                <div className="therapy-card couples" onClick={() => { setShowScheduleModal(false); setShowCouplesModal(true); }}>
+                  <div className="therapy-icon">
+                    <svg width="24" height="24" viewBox="0 0 40 40" fill="none">
+                      <path d="M14 20C16.7614 20 19 17.7614 19 15C19 12.2386 16.7614 10 14 10C11.2386 10 9 12.2386 9 15C9 17.7614 11.2386 20 14 20Z" fill="#130F26" opacity="0.4" />
+                      <path d="M14 22C9.58172 22 6 24.6863 6 28V29C6 29.5523 6.44772 30 7 30H21C21.5523 30 22 29.5523 22 29V28C22 24.6863 18.4183 22 14 22Z" fill="#130F26" />
+                      <path d="M26 20C28.7614 20 31 17.7614 31 15C31 12.2386 28.7614 10 26 10C23.2386 10 21 12.2386 21 15C21 17.7614 23.2386 20 26 20Z" fill="#130F26" opacity="0.4" />
+                      <path d="M26 22C21.5817 22 18 24.6863 18 28V29C18 29.5523 18.4477 30 19 30H33C33.5523 30 34 29.5523 34 29V28C34 24.6863 30.4183 22 26 22Z" fill="#130F26" />
+                    </svg>
+                  </div>
+                  <div className="therapy-info">
+                    <h3>Couples Therapy</h3>
+                    <p>Focused to help partners improve communication, resolve conflicts, and strengthen their relationship</p>
+                  </div>
+                </div>
+
+                <div className="therapy-card adolescent" onClick={() => { setShowScheduleModal(false); setShowAdolescentModal(true); }}>
+                  <div className="therapy-icon">
+                    <svg width="24" height="24" viewBox="0 0 41 41" fill="none">
+                      <path d="M36.6052 4.40467C35.751 3.53172 34.4869 3.20884 33.3081 3.55051L5.82103 11.4925C4.57736 11.8376 3.69586 12.8233 3.4584 14.0738C3.21582 15.3483 4.06315 16.9678 5.17015 17.6443L13.7648 22.8923C14.6463 23.4321 15.784 23.2971 16.5135 22.566L26.3552 12.7243C26.8506 12.21 27.6706 12.21 28.166 12.7243C28.6614 13.218 28.6614 14.0226 28.166 14.5351L18.3072 24.3768C17.5761 25.108 17.4394 26.2423 17.9775 27.1255L23.2289 35.7526C23.8439 36.7759 24.9031 37.3584 26.0648 37.3584C26.2014 37.3584 26.3552 37.3584 26.4919 37.3396C27.8244 37.1705 28.8835 36.2634 29.2764 34.9821L37.4252 7.70176C37.7839 6.54009 37.4594 5.27592 36.6052 4.40467Z" fill="#130F26" />
+                      <path opacity="0.4" d="M14.3338 32.7007C14.8343 32.2022 15.6459 32.2021 16.1463 32.7007C16.6451 33.2012 16.6451 34.0136 16.1463 34.5142L13.8123 36.8452C13.5629 37.0963 13.235 37.2212 12.907 37.2212C12.5791 37.2212 12.2512 37.0963 12.0018 36.8452C11.5014 36.3447 11.5013 35.5352 12.0018 35.0347L14.3338 32.7007ZM12.9949 26.23C13.4955 25.7312 14.3069 25.7312 14.8074 26.23C15.3062 26.7305 15.3062 27.5419 14.8074 28.0425L12.4734 30.3745C12.2241 30.6255 11.8961 30.7505 11.5682 30.7505C11.2402 30.7505 10.9123 30.6256 10.6629 30.3745C10.1624 29.874 10.1626 29.0645 10.6629 28.564L12.9949 26.23ZM6.56915 24.1929C7.06963 23.6941 7.8811 23.6942 8.38165 24.1929C8.88049 24.6934 8.88049 25.5048 8.38165 26.0054L6.04865 28.3374C5.79934 28.5884 5.47123 28.7133 5.14337 28.7134C4.81537 28.7134 4.48654 28.5885 4.23712 28.3374C3.73689 27.837 3.737 27.0274 4.23712 26.5269L6.56915 24.1929Z" fill="#130F26" />
+                    </svg>
+                  </div>
+                  <div className="therapy-info">
+                    <h3>Adolescent Therapy (13+)</h3>
+                    <p>Focused to support teens dealing with academic pressure, emotional challenges, and behavioral concerns.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    )
-  }
-  <footer className="mobile-footer">
-    All Rights Reserved. 2025 SafeStories.
-  </footer>
+        )
+      }
+      <footer className="mobile-footer">
+        All Rights Reserved. 2025 SafeStories.
+      </footer>
     </div >
   )
 }

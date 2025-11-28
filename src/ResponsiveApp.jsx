@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import DesktopApp from './App'
-import MobileApp from '../mobile/src/App'
+import MobileApp from './MobileApp'
 
 function ResponsiveApp() {
   const [isMobile, setIsMobile] = useState(false)

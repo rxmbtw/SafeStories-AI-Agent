@@ -273,14 +273,14 @@ body {
   -webkit-user-select: none;
 }
 
-.therapy-options {
+.mobile-container .therapy-options {
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-.therapy-card {
+.mobile-container .therapy-card {
   display: flex;
   align-items: center;
   gap: 15px;
@@ -294,26 +294,26 @@ body {
   -webkit-user-select: none;
 }
 
-.therapy-card:hover,
-.therapy-card:active {
+.mobile-container .therapy-card:hover,
+.mobile-container .therapy-card:active {
   transform: scale(1.02);
 }
 
-.therapy-card:focus {
+.mobile-container .therapy-card:focus {
   outline: none;
 }
 
-.therapy-card.individual {
+.mobile-container .therapy-card.individual {
   background: #2D7579;
   color: white;
 }
 
-.therapy-card.couples {
+.mobile-container .therapy-card.couples {
   background: #F1A937;
   color: black;
 }
 
-.therapy-card.adolescent {
+.mobile-container .therapy-card.adolescent {
   background: rgba(45, 117, 121, 0.22);
   color: black;
 }
@@ -355,7 +355,7 @@ body {
   opacity: 0.9;
 }
 
-.therapist-list {
+.mobile-container .therapist-list {
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -365,7 +365,7 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
-.therapist-card {
+.mobile-container .therapist-card {
   display: flex;
   align-items: center;
   gap: 15px;
@@ -423,21 +423,21 @@ body {
   transform: none !important;
 }
 
-.therapist-card:hover,
-.therapist-card:active {
+.mobile-container .therapist-card:hover,
+.mobile-container .therapist-card:active {
   transform: scale(1.02);
 }
 
-.therapist-card:focus {
+.mobile-container .therapist-card:focus {
   outline: none;
 }
 
-.therapist-card.active {
+.mobile-container .therapist-card.active {
   background: #2D7579;
   color: white;
 }
 
-.therapist-card.disabled {
+.mobile-container .therapist-card.disabled {
   opacity: 0.5;
   filter: grayscale(100%);
   cursor: not-allowed;

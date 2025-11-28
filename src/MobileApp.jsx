@@ -95,12 +95,12 @@ function MobileApp() {
       </div>
 
       <div className="mobile-actions">
-        <button className="mobile-action-btn schedule" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setShowScheduleModal(true); }} onTouchEnd={(e) => { e.preventDefault(); setShowScheduleModal(true); }}>
+        <div className="mobile-action-btn schedule" onClick={() => setShowScheduleModal(true)} onTouchStart={() => setShowScheduleModal(true)} onTouchEnd={() => setShowScheduleModal(true)} style={{cursor: 'pointer'}}>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
             <path d="M8 2V5M16 2V5M3.5 9.09H20.5M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
           Schedule a Session
-        </button>
+        </div>
         
         <button className="mobile-action-btn consultation" onClick={() => window.open('https://freeconsultation.dayschedule.com/free-consultation-safestories', '_blank')}>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none">

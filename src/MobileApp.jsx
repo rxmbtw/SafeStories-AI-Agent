@@ -1,8 +1,10 @@
 import './App.css'
 import '../mobile/src/App.css'
-import { useState } from 'react'
+import './MobileApp.css'
+import { useState, useEffect } from 'react'
 import { useConversation } from '@elevenlabs/react'
 import MobileLoader from './MobileLoader'
+import MobileLoaderSimple from './MobileLoaderSimple'
 import { IMAGE_URLS } from './imageConfig'
 
 function MobileApp() {
@@ -11,6 +13,12 @@ function MobileApp() {
   const [showCouplesModal, setShowCouplesModal] = useState(false)
   const [showAdolescentModal, setShowAdolescentModal] = useState(false)
   const [conversationState, setConversationState] = useState('idle')
+  const [isIOS, setIsIOS] = useState(false)
+  
+  useEffect(() => {
+    const iOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
+    setIsIOS(iOS)
+  }, [])
   
   const conversation = useConversation({
     onConnect: () => {
@@ -36,7 +44,7 @@ function MobileApp() {
         <p className="mobile-subtitle">Co-create your well-being journey with us</p>
         
         <div className="loader-section">
-          <MobileLoader />
+          {isIOS ? <MobileLoaderSimple /> : <MobileLoader />}
         </div>
 
         <div className="voice-section">

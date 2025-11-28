@@ -38,4 +38,19 @@
     padding: 15px;
     gap: 10px;
   }
+  
+  /* Fix iOS button touch issues */
+  .mobile-action-btn {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .mobile-voice-btn {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
 }

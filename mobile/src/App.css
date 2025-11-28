@@ -394,14 +394,33 @@ body {
   height: auto !important;
 }
 
-/* Aggressively reset nth-child positioning from desktop */
-.therapist-list .therapist-card:nth-child(n) {
+/* Aggressively reset nth-child positioning from desktop with high specificity */
+.mobile-container .therapist-list .therapist-card:nth-child(n) {
   position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  margin: 0 0 15px 0 !important;
+  transform: none !important;
+  width: 100% !important;
+  height: auto !important;
+  display: flex !important;
+}
+
+/* Ensure therapy cards also respect mobile layout */
+.mobile-container .therapy-card,
+.mobile-container .therapy-individual,
+.mobile-container .therapy-couples,
+.mobile-container .therapy-adolescent {
+  height: auto !important;
+  min-height: 100px !important;
+  position: relative !important;
+  width: 100% !important;
   left: auto !important;
   top: auto !important;
   margin: 0 0 15px 0 !important;
   transform: none !important;
-  width: 100% !important;
 }
 
 .therapist-card:hover,
@@ -433,6 +452,14 @@ body {
   flex-shrink: 0;
   background: #f0f0f0;
   border: 2px solid #e0e0e0;
+}
+
+/* Ensure text doesn't get cut off */
+.mobile-container .therapist-details h3,
+.mobile-container .therapist-details p {
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
 }
 
 .therapist-details h3 {

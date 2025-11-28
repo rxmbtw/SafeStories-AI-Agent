@@ -1,16 +1,95 @@
-# React + Vite
+# SafeStories AI Agent
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive therapy booking platform with AI voice integration, built with React and Vite.
 
-Currently, two official plugins are available:
+## 🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **AI Voice Assistant** - Talk directly with ElevenLabs integration
+- **Responsive Design** - Automatic mobile/desktop detection
+- **Therapist Booking** - Individual, Couples, and Adolescent therapy
+- **Real-time Conversations** - Voice-based therapy sessions
 
-## React Compiler
+## 🚀 Quick Start
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Development
+```bash
+# Install dependencies
+npm install
 
-## Expanding the ESLint configuration
+# Run desktop version
+npm run dev
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Run mobile version
+cd mobile && npm install && npm run dev
+
+# Run responsive version (auto-detects device)
+npm run dev-responsive
+```
+
+### Production Build
+```bash
+# Build responsive version
+npm run build-responsive
+
+# Preview build
+npm run preview
+```
+
+## 📱 Deployment
+
+### Vercel (Recommended)
+1. Connect GitHub repository to Vercel
+2. Set build settings:
+   - **Build Command**: `npm run build-responsive`
+   - **Output Directory**: `dist`
+   - **Install Command**: `npm install`
+
+### Manual Deployment
+```bash
+npm run build-responsive
+# Deploy dist/ folder to your hosting provider
+```
+
+## 🏗️ Project Structure
+
+```
+├── src/                    # Desktop version
+├── mobile/src/            # Mobile version  
+├── public/                # Static assets
+├── ResponsiveApp.jsx      # Device detection logic
+└── vite.config.responsive.js # Responsive build config
+```
+
+## 🔧 Configuration
+
+### Environment Variables
+- ElevenLabs Agent ID: `agent_0701kazhwzywftzbf33rq27eaa36`
+- Image URLs: Configured in `imageConfig.js`
+
+### Therapist Links
+- Individual Therapy: Anjali Pillai, Ishika Mahajan
+- Couples Therapy: Ishika Mahajan  
+- Adolescent Therapy: Anjali Pillai, Ishika Mahajan
+
+## 📞 External Integrations
+
+- **ElevenLabs**: AI voice conversations
+- **DaySchedule**: Therapist booking system
+- **Google Cloud Storage**: Image hosting
+
+## 🛠️ Tech Stack
+
+- React 19.2.0
+- Vite 7.2.4
+- ElevenLabs React SDK
+- Styled Components
+- Responsive CSS
+
+## 📄 License
+
+All Rights Reserved. 2025 SafeStories.
+
+---
+
+**Live Demo**: Deploy to get your live URL
+**Support**: Contact SafeStories team for assistance

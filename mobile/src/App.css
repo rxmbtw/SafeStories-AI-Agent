@@ -378,14 +378,30 @@ body {
   touch-action: manipulation;
   user-select: none;
   -webkit-user-select: none;
-  min-height: 80px;
+  min-height: auto !important;
   /* Overrides for desktop styles */
   position: relative !important;
   width: 100% !important;
   left: auto !important;
   top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
   transform: none !important;
-  margin: 0 !important;
+  margin: 0 0 15px 0 !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  height: auto !important;
+}
+
+/* Aggressively reset nth-child positioning from desktop */
+.therapist-list .therapist-card:nth-child(n) {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  margin: 0 0 15px 0 !important;
+  transform: none !important;
+  width: 100% !important;
 }
 
 .therapist-card:hover,
@@ -410,8 +426,8 @@ body {
 }
 
 .therapist-avatar {
-  width: 60px;
-  height: 60px;
+  width: 60px !important;
+  height: 60px !important;
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;

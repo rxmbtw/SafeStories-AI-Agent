@@ -364,6 +364,13 @@ body {
   user-select: none;
   -webkit-user-select: none;
   min-height: 80px;
+  /* Overrides for desktop styles */
+  position: relative !important;
+  width: 100% !important;
+  left: auto !important;
+  top: auto !important;
+  transform: none !important;
+  margin: 0 !important;
 }
 
 .therapist-card:hover,

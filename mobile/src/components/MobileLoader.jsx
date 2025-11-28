@@ -7,7 +7,7 @@ const MobileLoader = () => {
       <div className="loader">
         <svg width={100} height={100} viewBox="0 0 100 100">
           <defs>
-            <mask id="clipping">
+            <mask id="mobile-clipping">
               <polygon points="0,0 100,0 100,100 0,100" fill="black" />
               <polygon points="25,25 75,25 50,75" fill="white" />
               <polygon points="50,25 75,75 25,75" fill="white" />
@@ -66,56 +66,56 @@ const StyledWrapper = styled.div`
       var(--color-one) 30%,
       var(--color-two) 70%
     );
-    mask: url(#clipping);
-    -webkit-mask: url(#clipping);
+    mask: url(#mobile-clipping);
+    -webkit-mask: url(#mobile-clipping);
   }
 
   .loader svg {
     position: absolute;
   }
 
-  .loader svg #clipping {
+  .loader svg #mobile-clipping {
     filter: contrast(15);
     animation: roundness calc(var(--time-animation) / 2) linear infinite;
   }
 
-  .loader svg #clipping polygon {
+  .loader svg #mobile-clipping polygon {
     filter: blur(7px);
   }
 
-  .loader svg #clipping polygon:nth-child(1) {
+  .loader svg #mobile-clipping polygon:nth-child(1) {
     transform-origin: 75% 25%;
     transform: rotate(90deg);
   }
 
-  .loader svg #clipping polygon:nth-child(2) {
+  .loader svg #mobile-clipping polygon:nth-child(2) {
     transform-origin: 50% 50%;
     animation: rotation var(--time-animation) linear infinite reverse;
   }
 
-  .loader svg #clipping polygon:nth-child(3) {
+  .loader svg #mobile-clipping polygon:nth-child(3) {
     transform-origin: 50% 60%;
     animation: rotation var(--time-animation) linear infinite;
     animation-delay: calc(var(--time-animation) / -3);
   }
 
-  .loader svg #clipping polygon:nth-child(4) {
+  .loader svg #mobile-clipping polygon:nth-child(4) {
     transform-origin: 40% 40%;
     animation: rotation var(--time-animation) linear infinite reverse;
   }
 
-  .loader svg #clipping polygon:nth-child(5) {
+  .loader svg #mobile-clipping polygon:nth-child(5) {
     transform-origin: 40% 40%;
     animation: rotation var(--time-animation) linear infinite reverse;
     animation-delay: calc(var(--time-animation) / -2);
   }
 
-  .loader svg #clipping polygon:nth-child(6) {
+  .loader svg #mobile-clipping polygon:nth-child(6) {
     transform-origin: 60% 40%;
     animation: rotation var(--time-animation) linear infinite;
   }
 
-  .loader svg #clipping polygon:nth-child(7) {
+  .loader svg #mobile-clipping polygon:nth-child(7) {
     transform-origin: 60% 40%;
     animation: rotation var(--time-animation) linear infinite;
     animation-delay: calc(var(--time-animation) / -1.5);

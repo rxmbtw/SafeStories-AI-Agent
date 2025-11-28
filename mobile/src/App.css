@@ -93,6 +93,10 @@ body {
   gap: 8px;
   cursor: pointer;
   transition: all 0.3s;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .mobile-voice-btn:hover {
@@ -127,6 +131,10 @@ body {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .mobile-end-btn:hover {
@@ -166,11 +174,20 @@ body {
   gap: 8px;
   cursor: pointer;
   transition: all 0.3s;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
-.mobile-action-btn:hover {
+.mobile-action-btn:hover,
+.mobile-action-btn:active {
   opacity: 0.9;
   transform: translateY(-1px);
+}
+
+.mobile-action-btn:focus {
+  outline: none;
 }
 
 .mobile-action-btn.schedule {
@@ -250,6 +267,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .therapy-options {
@@ -267,10 +288,19 @@ body {
   border-radius: 12px;
   cursor: pointer;
   transition: transform 0.2s;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
-.therapy-card:hover {
+.therapy-card:hover,
+.therapy-card:active {
   transform: scale(1.02);
+}
+
+.therapy-card:focus {
+  outline: none;
 }
 
 .therapy-card.individual {
@@ -317,6 +347,7 @@ body {
   gap: 15px;
   max-height: 300px;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .therapist-card {
@@ -328,10 +359,20 @@ body {
   cursor: pointer;
   transition: transform 0.2s;
   background: rgba(45, 117, 121, 0.1);
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  min-height: 80px;
 }
 
-.therapist-card:hover {
+.therapist-card:hover,
+.therapist-card:active {
   transform: scale(1.02);
+}
+
+.therapist-card:focus {
+  outline: none;
 }
 
 .therapist-card.active {
@@ -352,6 +393,8 @@ body {
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
+  background: #f0f0f0;
+  border: 2px solid #e0e0e0;
 }
 
 .therapist-details h3 {
@@ -381,6 +424,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .go-back:hover {
@@ -391,7 +438,30 @@ body {
   max-height: 70vh;
 }
 
-/* Responsive adjustments */
+/* Image loading optimization */
+.therapist-avatar {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+.therapist-avatar:not([src]),
+.therapist-avatar[src=""],
+.therapist-avatar[src="undefined"] {
+  background: linear-gradient(135deg, #2D7579, #1a4447);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.therapist-avatar:not([src])::after,
+.therapist-avatar[src=""]::after,
+.therapist-avatar[src="undefined"]::after {
+  content: "👤";
+  font-size: 24px;
+  color: white;
+}
+
+/* Enhanced mobile touch targets */
 @media (max-width: 480px) {
   .mobile-container {
     max-width: 100%;
@@ -406,5 +476,18 @@ body {
     font-size: 15px;
   }
   
-
+  .mobile-action-btn,
+  .therapy-card,
+  .therapist-card {
+    min-height: 48px;
+  }
+  
+  .therapist-card {
+    padding: 20px 15px;
+  }
+  
+  .modal-close {
+    min-width: 44px;
+    min-height: 44px;
+  }
 }

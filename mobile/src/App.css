@@ -318,6 +318,21 @@ body {
   color: black;
 }
 
+/* Overrides for desktop styles leaking into mobile */
+.therapy-card,
+.therapy-individual,
+.therapy-couples,
+.therapy-adolescent {
+  height: auto !important;
+  min-height: 100px !important;
+  position: relative !important;
+  width: 100% !important;
+  left: auto !important;
+  top: auto !important;
+  margin: 0 !important;
+  transform: none !important;
+}
+
 .therapy-icon {
   width: 50px;
   height: 50px;
@@ -474,25 +489,25 @@ body {
     max-width: 100%;
     padding: 15px;
   }
-  
+
   .mobile-title {
     font-size: 22px;
   }
-  
+
   .mobile-subtitle {
     font-size: 15px;
   }
-  
+
   .mobile-action-btn,
   .therapy-card,
   .therapist-card {
     min-height: 48px;
   }
-  
+
   .therapist-card {
     padding: 20px 15px;
   }
-  
+
   .modal-close {
     min-width: 44px;
     min-height: 44px;
